@@ -34,4 +34,18 @@ it('should verify the firs and las names are set', () => {
         firstName: 'Mario',
         lastName: 'Miranda'
     });
-})
+});
+
+it('should async add two numbers', (done) => {
+    utils.asyncAdd(4, 3, (sumResult) => {
+        expect(sumResult).toBe(7).toBeA('number');
+        done();
+    });
+});
+
+it('should async square a number', (done) => {
+    utils.asyncSquare(3, (squareResult) => {
+        expect(squareResult).toBe(9).toBeA('number');
+        done();
+    });
+});
